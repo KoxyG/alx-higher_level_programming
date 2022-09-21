@@ -1,3 +1,3 @@
-#!#usr#bin#python3
-for nums in range(0, 99):
-    print("{:02d}".format(nums), end=",")
+#!/usr/bin/python3
+for nums in range(0, 98):
+    print("{:d} = 0x{:x}".format(nums, nums))
