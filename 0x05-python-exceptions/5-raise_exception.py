@@ -2,6 +2,7 @@
 
 def raise_exception():
     try:
-        raise _exception()
-    except TypeError as te:
+        raise TypeError()
+    except TypeError:
         print("Exception raised")
+        raise
