@@ -8,4 +8,11 @@ Editors are vi, vim, emacs
  - All  first line of all your files should be exactly #!/usr/bin/python3
  -  pycodestyle (version 2.8.*)
 
+**Python Test Cases**
+ - test files should be inside a folder tests
+ - All test files  (extension: .txt)
+ - All test files are executed by using this command: python3 -m doctest ./tests/*
+ - All modules have a documentation (python3 -c 'print(__import__("my_module").__doc__)')
+ - All functions have a documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)')
+
 This was done by [Progress Ochuko Eyaadah](http://www.github.com/KoxyG)
