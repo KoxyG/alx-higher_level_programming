@@ -9,7 +9,7 @@ class Rectangle:
     @property
     def width(self):
         """retrieves the attribute"""
-        return self.__attribute
+        return self.__width
 
     @width.setter
     def width(self, value):
