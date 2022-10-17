@@ -23,7 +23,7 @@ class Rectangle:
         """retrieves width attribute"""
         return self.__width
 
-    @property.setter
+    @width.setter
     def width(self, value):
         """set width attributes"""
         if not isinstance(value, int):
@@ -37,7 +37,7 @@ class Rectangle:
         """sets height attribute"""
         return self.__height
 
-    @property.setter
+    @height.setter
     def height(self, value):
         """sets height attributes"""
         if not isinstance(value, int):
