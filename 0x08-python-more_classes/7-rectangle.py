@@ -58,7 +58,7 @@ class Rectangle:
             return (0)
         return ((self.__width * 2) + (self.__height * 2))
 
-    def __str__(self):
+    def __str__(self) -> str:
         """presents a diagram of the rectangle defined for an object"""
         if self.__width == 0 or self.__height == 0:
             return ("")
@@ -69,15 +69,15 @@ class Rectangle:
                     rectangle += str(self.print_symbol)
                 except Exception:
                     rectangle += type(self).print_symbol
-                rectangle += "#"
             if column < self.__height - 1:
                 rectangle += "\n"
         return (rectangle)
 
     def __repr__(self):
+        """returns a string representation of the rectangle"""
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
 
     def __del__(self):
-        """prints a message  for every object deleted"""
+        """prints a message for every object that is deleted"""
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
