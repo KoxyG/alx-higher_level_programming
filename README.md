@@ -1,4 +1,4 @@
-# Solutions to Python related tasks
+# Solutions to Python3 related tasks
 
 ## This repo is for the second sprint of the ALX Software Engineering Programme.
 
