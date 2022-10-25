@@ -5,7 +5,6 @@ This is a module that inherits the list from a class
 
 
 class MyList(list):
-    pass
 
 """A class that inherits the list"""
     def print_sorted(self):
