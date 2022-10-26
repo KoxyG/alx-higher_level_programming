@@ -10,7 +10,7 @@ class BaseGeometry:
         """method not implemented"""
         raise Exception("area() is not implemented")
 
-        def integer_validator(self, name, value):
+    def integer_validator(self, name, value):
         """method that validates value
         """
 
