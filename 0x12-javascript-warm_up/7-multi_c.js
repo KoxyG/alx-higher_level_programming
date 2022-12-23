@@ -1,14 +1,11 @@
 #!/usr/bin/node
-// argc is always more than the number of command line argument
-// if one argument is expected argc should be = 2
-
-const x = process.argv[2];
-
-if (!parseInt(x)) {
-    console.log('Missing number of occurrences');
+if (process.argv[2] === undefined || isNaN(process.argv[2])) {
+  console.log('Missing number of occurrences');
 } else {
-    for (let i = 0; i < x; i++) {
-        console.log('C is fun')
-    }
+  const x = Number(process.argv[2]);
+  let i = 0;
+  while (i < x) {
+    console.log('C is fun');
+    i++;
+  }
 }
-
