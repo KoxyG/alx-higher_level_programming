@@ -1,4 +1,3 @@
 #!/bin/bash
-# This is a bash script that send in URL, sends a GET request and display the body of the response using curl
-
+# Get the response body for a given URL for 200 status code responses.
 curl -sL "$1"
