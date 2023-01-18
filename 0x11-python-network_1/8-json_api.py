@@ -16,10 +16,10 @@ def searchapi():
     try:
         data = result.json()
         if data:
-            print("[{}] {}".format(data["id"], data["name"]))
+            print("[{}] {}".format(data.get("id"), data.get("name")))
         else:
             print("No result")
-    except:
+    except ValueError:
         print("Not a valid JSON")
 
 if __name__ == "__main__":
