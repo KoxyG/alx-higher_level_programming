@@ -13,6 +13,10 @@ import urllib.error
 
 
 if __name__ == "__main__":
+    import sys
+    import urllib.request
+    import urllib.error
+
     try:
         with urllib.request.urlopen(sys.argv[1]) as req:
             print(req.read().decode('UTF-8'))
