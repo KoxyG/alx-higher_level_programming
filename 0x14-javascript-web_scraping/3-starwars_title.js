@@ -3,8 +3,8 @@
 //A script that prints the title of a movie
 
 const request = require('request');
-const movieID = process.argv[2];
-const url = `https://swapi-api.alx-tools.com/api/films/:id`;
+const movieId = process.argv[2];
+const url = `https://swapi-api.alx-tools.com/api/films/${movieId}`;
 
 request.get(url, (error, response, body) => {
   if (error) {
