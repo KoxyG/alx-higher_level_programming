@@ -4,22 +4,24 @@
 // Only prints users with completed task
 // must use the request module
 
-const require = request('request');
+const request = require('request');
 const url = process.argv[2];
 
-request.get(url, function (error, response, body) {
+request.get(url, { json: true }, (error, response, body) => {
   if (error) {
     console.log(error);
-  } else if (response.statusCode == 200) {
-    const taskComplete = {};
-    const tasks = JSON.parse(body);
-    if (task.completed) {
-      if (!tasksComplete[todo.userId]) {
-        tasksComplete[tasks.userId] = 1;
+    return;
+  }
+
+  const tasksCompleted = {};
+  body.forEach((todo) => {
+    if (todo.completed) {
+      if (!tasksCompleted[todo.userId]) {
+        tasksCompleted[todo.userId] = 1;
       } else {
-        tasksComplete[tasks.userId] += 1;
+        tasksCompleted[todo.userId] += 1;
       }
     }
   });
-  console.log(tasksComplete);
+  console.log(tasksCompleted);
 });
